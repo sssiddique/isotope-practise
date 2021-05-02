@@ -11,11 +11,69 @@
 </head>
 <body>
 	
-<h1 class="display-1">Hello World</h1>
+<!-- <h1 class="display-1">Hello World</h1> -->
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="item-menu">
+				<ul>
+					<li data-filter="*">All</li>
+					<li data-filter=".webdesign">Web Design</li>
+					<li data-filter=".webdevelopment">Web Development</li>
+					<li data-filter=".seo">SEO</li>
+					<li data-filter=".graphics">Graphics</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="item-details">
+		<div class="col-md-4 item webdesign">
+			<img src="img/5.jpg" alt="">
+		</div>
+		<div class="col-md-4 item webdesign">
+			<img src="img/1.jpg" alt="">
+		</div>
+		<div class="col-md-4 item webdevelopment">
+			<img src="img/3.png" alt="">
+		</div>
+		<div class="col-md-4 item seo">
+			<img src="img/2.png" alt="">
+		</div>
+		<div class="col-md-4 item seo">
+			<img src="img/4.jpg" alt="">
+		</div>
+		<div class="col-md-4 item seo">
+			<img src="img/6.jpg" alt="">
+		</div>
+		<div class="col-md-4 item seo">
+			<img src="img/1.jp" alt="">
+		</div>
+		<div class="col-md-4 item graphics">
+			<img src="img/1.jpg" alt="">
+		</div>
+		<div class="col-md-4 item graphics">
+			<img src="img/1.jpg" alt="">
+		</div>
+	</div>
+</div>
 
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/pooper.min.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
+	<script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+	<script>
+		var $grid = $('.item-details').isotope({
+		// options
+		});
+		// filter items on button click
+		$('.item-menu').on( 'click', 'li', function() {
+		var filterValue = $(this).attr('data-filter');
+		$grid.isotope({ filter: filterValue });
+		});
+	</script>
 </body>
 </html>

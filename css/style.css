@@ -17,3 +17,27 @@ h1, h2, h3, h4, h5, h6, a, ul, ol, button, input, p{
 body{
 	font-size: 17px;
 }
+.item-menu{
+	text-align: center;
+	margin: 30px auto;
+}
+.item-menu ul li{
+	list-style: none;
+	padding: 12px 15px;
+	display: inline-block;
+	border: 1px solid tomato;
+	cursor: pointer;
+	margin-right:10px;
+	border-radius: 5px;
+}
+.item-menu ul li:hover, .item-menu ul li:active{
+	background:tomato;
+	color: #fff;
+}
+.item-details{
+	width: 100%;
+}
+.item-details img{
+	width: 100%;
+	margin-bottom: 30px;
+}
