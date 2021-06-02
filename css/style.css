@@ -41,3 +41,9 @@ body{
 	width: 100%;
 	margin-bottom: 30px;
 }
+.item-details img:hover{
+	cursor: pointer;
+	background:tomato;
+}
+.grid-item--width2 { width: 50%; height: 400px; }
+.grid-item--height2 {  width: 25%;height: 200px; }
